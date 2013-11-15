@@ -4,7 +4,6 @@ __author__ = 'sergioska'
 
 import lxml.etree as XTree
 from BeautifulSoup import BeautifulSoup
-import cStringIO
 import StringIO
 
 class HtmlProcessor(AbstractProcessor.AbstractProcessor):
@@ -12,7 +11,7 @@ class HtmlProcessor(AbstractProcessor.AbstractProcessor):
     @property
     def process(self):
         parser = XTree.HTMLParser()
-        tmpdom = XTree.parse(cStringIO.StringIO(self.content), parser)
+        tmpdom = XTree.parse(StringIO.StringIO(self.content), parser)
         self.content = XTree.tostring(tmpdom.getroot())
         self.content = self.content[self.content.index("<body "):]
         soup = BeautifulSoup(self.content)
