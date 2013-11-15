@@ -21,7 +21,7 @@ processor = xProc.factory(sWebOutput, stylesheet)
 print processor.process
 ``` 
 
-- [X] Html parsing
+- [x] Html parsing
 - [ ] Check Xml parsing
 - [ ] Add post request feature to HttpClient
 - [ ] Add working sample (with an really url and really stylesheet)
