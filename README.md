@@ -21,11 +21,11 @@ processor = xProc.factory(sWebOutput, stylesheet)
 print processor.process
 ```
 
-- [x] Html parsing
-- [ ] Check Xml parsing
-- [ ] Add post request feature to HttpClient
-- [ ] Add working sample (with an really url and really stylesheet)
-- [ ] Split HttpClient login in 2 layers (divide get/post login from client request feature such as getPage) 
+- [x] html parsing
+- [ ] check Xml parsing
+- [ ] add post request feature to HttpClient
+- [ ] add working sample (with an really url and really stylesheet)
+- [ ] split HttpClient login in 2 layers (divide get/post login from client request feature such as getPage) 
 
 
 
