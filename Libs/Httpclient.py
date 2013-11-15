@@ -11,6 +11,11 @@ class Httpclient:
 
     @classmethod
     def getPage(self, sUrl):
+        """
+        get html source page from cUrl request
+        @param sUrl:
+        @return:
+        """
         c = pycurl.Curl()
         c.setopt(c.URL, sUrl)
         c.setopt(c.WRITEFUNCTION, Httpclient.buffer.write)

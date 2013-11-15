@@ -8,13 +8,16 @@ class XmlProcessor(AbstractProcessor.AbstractProcessor):
 
     @property
     def process(self):
+        """
+        implement process logic for xml
+        @return:
+        """
         try:
             dom = XTree.parse(self.content)
             xslt = XTree.parse(self.stylesheet)
             transform = XTree.XSLT(xslt)
             newdom = transform(dom)
-            print(XTree.tostring(newdom, pretty_print=True))
         except IOError:
             print "Xml or Xsl file not found!"
             return False
-        return True
+        return XTree.tostring(newdom, pretty_print=True)

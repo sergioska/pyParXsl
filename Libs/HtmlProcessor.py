@@ -10,6 +10,10 @@ class HtmlProcessor(AbstractProcessor.AbstractProcessor):
 
     @property
     def process(self):
+        """
+        implement process logic for html
+        @return:
+        """
         parser = XTree.HTMLParser()
         tmpdom = XTree.parse(StringIO.StringIO(self.content), parser)
         self.content = XTree.tostring(tmpdom.getroot())

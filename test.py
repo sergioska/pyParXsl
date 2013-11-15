@@ -1,5 +1,7 @@
 __author__ = 'sergioska'
 
+''' this script is an example '''
+
 import sys
 from Libs import Processor, Httpclient
 import os.path as Fs
