@@ -2,6 +2,7 @@ __author__ = 'sergioska'
 
 import AbstractProcessor
 import lxml.etree as XTree
+import StringIO
 
 
 class XmlProcessor(AbstractProcessor.AbstractProcessor):
@@ -13,7 +14,8 @@ class XmlProcessor(AbstractProcessor.AbstractProcessor):
         @return:
         """
         try:
-            dom = XTree.parse(self.content)
+            f = StringIO.StringIO(self.content)
+            dom = XTree.parse(f)
             xslt = XTree.parse(self.stylesheet)
             transform = XTree.XSLT(xslt)
             newdom = transform(dom)
