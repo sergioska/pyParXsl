@@ -9,9 +9,12 @@ You can write a base parser xslt based that process a page from a web request, w
 
 ```python
 from Libs import Processor, Httpclient
+'setting your stylesheet'
 stylesheet = "yourstylesheet.xsl"
+'request a web page'
 client = Httpclient.Httpclient()
 sWebOutput = client.getPage(url)
+'apply the stylesheet to transform the source'
 xProc = Processor.Processor()
 processor = xProc.factory(sWebOutput, stylesheet)
 print processor.process
