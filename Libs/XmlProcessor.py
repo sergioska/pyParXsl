@@ -1,7 +1,6 @@
-from pyCrawler.Libs import AbstractProcessor
-
 __author__ = 'sergioska'
 
+import AbstractProcessor
 import lxml.etree as XTree
 
 

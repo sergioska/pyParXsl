@@ -1,4 +1,4 @@
-from pyCrawler.Libs import AbstractProcessor
+import AbstractProcessor
 
 __author__ = 'sergioska'
 

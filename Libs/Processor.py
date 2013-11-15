@@ -1,4 +1,4 @@
-from pyCrawler.Libs import HtmlProcessor, XmlProcessor
+import HtmlProcessor, XmlProcessor
 
 __author__ = 'sergioska'
 
