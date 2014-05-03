@@ -14,5 +14,4 @@ setup(
   url="http://github.com/sergioska/pyParXsl/tree/master",
   download_url="http://github.com/sergioska/PyParXsl/tree/master",
   zip_safe = False, # we include templates and tests
-  install_requires=['lxml==3.1.2', 'BeautifulSoup==4.3.2', 'pycurl==7.19.3.1'],
   )
